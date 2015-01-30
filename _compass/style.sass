@@ -1,0 +1,33 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass"
+
+
+$base-font-size: 16px
+$base-line-height: 30px
++establish-baseline
+
+.container
+  max-width: 650px
+  margin: 0 auto
+
+h1
+  +adjust-font-size-to($base-font-size * 3)
+h2
+  +adjust-font-size-to($base-font-size * 1.5)
+
+article
+  h1
+    $size: $base-font-size * 1.5
+    +adjust-font-size-to($size)
+    
+  h2
+    +adjust-font-size-to($base-font-size * 1.25)
+
+.post-date
+  $size: $base-font-size * 0.8
+  +adjust-font-size-to($size)
+  
