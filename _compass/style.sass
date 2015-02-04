@@ -15,11 +15,6 @@ $base-line-height: 30px
   max-width: 650px
   margin: 0 auto
 
-h1
-  +adjust-font-size-to($base-font-size * 3)
-h2
-  +adjust-font-size-to($base-font-size * 1.5)
-
 article
   h1
     $size: $base-font-size * 1.5
@@ -42,6 +37,13 @@ header
   background-color: $base-blue
   color: #fff
   padding-top: 30px
+
+  h1
+    +adjust-font-size-to($base-font-size * 3)
+  h2
+    $size: $base-font-size * 1.5
+    +adjust-font-size-to($size)
+    +padding-trailer(1, $size)
 
 html, body
   padding: 0
