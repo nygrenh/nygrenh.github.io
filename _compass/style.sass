@@ -20,7 +20,7 @@ article
   h1
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
-    
+
   h2
     +adjust-font-size-to($base-font-size * 1.25)
 
@@ -29,10 +29,14 @@ article
   +adjust-font-size-to($size)
 
 footer
-  +adjust-leading-to(4)
+  $font-size: $base-font-size * 3
+  +adjust-font-size-to($font-size)
+  +adjust-leading-to(4, $font-size)
   background-color: #333
   font-weight: bold
   color: white
+  a
+    color: white
 
 header
   background-color: $base-blue
