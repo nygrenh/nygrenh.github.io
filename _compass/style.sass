@@ -1,9 +1,5 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass"
+@import "compass/reset"
 
 $base-blue: #385f82
 
@@ -16,17 +12,29 @@ $base-line-height: 30px
   max-width: 650px
   margin: 0 auto
 
+p + p
+  +padding-leader(0.5)
+
 article
+  +padding-leader(1)
+  +padding-trailer(1)
   h1
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
+    +adjust-leading-to(2, $size)
 
   h2
-    +adjust-font-size-to($base-font-size * 1.25)
+    $size: $base-font-size * 1.25
+    +adjust-font-size-to($size)
+    +adjust-leading-to(2, $size)
+
+  h3, h4
+    +adjust-leading-to(2)
 
 .post-date
   $size: $base-font-size * 0.8
   +adjust-font-size-to($size)
+  +adjust-leading-to(2, $size)
 
 footer
   $font-size: $base-font-size * 3
@@ -41,25 +49,26 @@ footer
 header
   background-color: $base-blue
   color: #fff
-  padding-top: 30px
   a
     color: white
     &:hover
       text-decoration: none
 
   h1
-    +adjust-font-size-to($base-font-size * 3)
+    $size: $base-font-size * 3
+    +adjust-font-size-to($size)
+    +adjust-leading-to(4, $size)
+    +padding-leader(1, $size)
   h2
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
     +padding-trailer(1, $size)
     font-family: 'Open Sans', sans-serif
 
-html, body
-  padding: 0
-  margin: 0
-  border: 0
+body
   font-family: 'Lustria', serif
+  //+debug-vertical-alignment
+
 
 a
   text-decoration: none
