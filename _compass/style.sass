@@ -15,9 +15,15 @@ $base-line-height: 30px
 p + p
   +padding-leader(0.5)
 
+// Workaround for p's breaking baseline with images
+p
+  max-height: 480px
+
 article
   +padding-leader(1)
   +padding-trailer(1)
+  img
+    height: 480px
   h1
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
