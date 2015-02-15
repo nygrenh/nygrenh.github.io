@@ -22,8 +22,18 @@ p
 article
   +padding-leader(1)
   +padding-trailer(1)
-  img
-    height: 480px
+  code
+    background-color: #f3f3f3
+    padding: 0.1em 0.1em
+    border-radius: 3px
+  pre
+    code
+      background-color: #333
+      display: block
+      color: #fff
+      font-family: monospace
+      padding: 3em
+      overflow: scroll
   h1
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
