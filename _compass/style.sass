@@ -27,13 +27,15 @@ article
     padding: 0.1em 0.1em
     border-radius: 3px
   pre
+    +padding-leader(1)
+    +padding-trailer(1)
     code
       background-color: #333
       display: block
       color: #fff
       font-family: monospace
       padding: 3em
-      overflow: scroll
+      overflow: auto
   h1
     $size: $base-font-size * 1.5
     +adjust-font-size-to($size)
